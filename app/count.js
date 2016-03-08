@@ -2,6 +2,7 @@ exports = (typeof window === 'undefined') ? global : window;
 
 
 exports.countAnswers = {
+
   count : function (start, end) {
     // var cb = function() {
     //   if(start > 0) {
@@ -23,4 +24,5 @@ exports.countAnswers = {
     //   cancel: cancel
     // };
   }
+
 };

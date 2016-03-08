@@ -1,6 +1,7 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.stringsAnswers = {
+
   reduceString: function(str, amount) {
     var sets = [];
     for(var prev, curr, result = '', i = 0; i < str.length; i++) {
@@ -18,6 +19,7 @@ exports.stringsAnswers = {
     }
     return sets.join('');
   },
+
   wordWrap: function(str, cols) {
     var cnt = 0;
     var words = str.split(' ');
@@ -45,4 +47,5 @@ exports.stringsAnswers = {
     }
     return a.join('');
   }
+
 };

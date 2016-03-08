@@ -1,6 +1,7 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.flowControlAnswers = {
+
   fizzBuzz : function(num) {
     // write a function that receives a number as its argument;
     // if the number is divisible by 3, the function should return 'fizz';
@@ -10,7 +11,6 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
-    // debugger;
     var status = '';
     if(!isNaN(parseInt(num, 10))) {
         if(num % 3 === 0) status += 'fizz';
@@ -20,4 +20,5 @@ exports.flowControlAnswers = {
     }
     return false;
   }
+
 };

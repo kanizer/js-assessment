@@ -1,6 +1,7 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.functionsAnswers = {
+
   argsAsArray : function(fn, arr) {
     return fn.apply(fn, arr.slice(0));
   },
@@ -81,4 +82,5 @@ exports.functionsAnswers = {
 
     return getFunction(Array.prototype.slice.call(arguments, 1));
   }
+
 };

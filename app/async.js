@@ -14,7 +14,6 @@ function getData(path, cb) {
 exports.asyncAnswers = {
 
   async : function(value) {
-
     // spoof condition validation
     return (typeof value !== 'undefined') ? {
         then: function(cb) {
@@ -35,13 +34,10 @@ exports.asyncAnswers = {
           return this;
         }
     };
-
   },
 
   manipulateRemoteData : function(url) {
-
     return {
-
       then: function(cb) {
         getData(url, function(data) {
           cb(JSON.parse(data).people.map(function(person) {
@@ -49,7 +45,6 @@ exports.asyncAnswers = {
           }).sort());
         });
       }
-
     }
   }
 
