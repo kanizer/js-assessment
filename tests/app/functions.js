@@ -130,10 +130,6 @@ describe('functions', function() {
     expect(typeof result).to.eql('function');
     expect(result.length).to.eql(1);
 
-    result = functionsAnswers.curryIt(curryMe)(a);
-    expect(typeof result).to.eql('function');
-    expect(result.length).to.eql(1);
-
     result = functionsAnswers.curryIt(curryMe)(a)(b);
     expect(typeof result).to.eql('function');
     expect(result.length).to.eql(1);

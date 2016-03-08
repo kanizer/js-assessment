@@ -7,7 +7,7 @@ describe('async behavior', function() {
   it('you should understand how to use promises to handle asynchronicity', function(done) {
     var flag = false;
     var finished = 0;
-    var total = 2;
+    var total = 3;
 
     function finish(done) {
       if (++finished === total) { done(); }
@@ -22,6 +22,15 @@ describe('async behavior', function() {
     asyncAnswers.async('success').then(function(result) {
       flag = result;
       expect(flag).to.eql('success');
+      finish(done);
+    }).catch(function(err) {
+      expect(true).to.eql(false); // force an error
+    });
+
+    asyncAnswers.async().then(function(result) {
+      expect(true).to.eql(false); // force an error
+    }).catch(function(err) {
+      expect(err.message).to.eql('Validation failure');
       finish(done);
     });
 
