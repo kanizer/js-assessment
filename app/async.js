@@ -31,6 +31,7 @@ exports.asyncAnswers = {
         },
         catch: function(cb) {
           setTimeout(cb, 100, new Error('Validation failure'));
+          console.log('sure bud')
           return this;
         }
     };
