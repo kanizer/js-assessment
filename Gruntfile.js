@@ -15,6 +15,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      uselessProp: 'val',
       scripts: {
         files: ['app/**/*.js', 'tests/app/**/*.js'],
         tasks: ['jshint'],
